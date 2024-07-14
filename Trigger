@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trigger Webhook</title>
+</head>
+<body>
+  <button onclick="triggerWebhook()">Trigger Webhook</button>
+  <script>
+    function triggerWebhook() {
+      fetch('bdceybfo99y2jr02u2wq3c03td4fc7ba@hook.eu1.make.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message: 'Webhook triggered from Notion' })
+      })
+      .then(response => {
+        if (response.ok) {
+          alert('Webhook triggered successfully!');
+        } else {
+          alert('Failed to trigger webhook.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Error triggering webhook.');
+      });
+    }
+  </script>
+</body>
+</html>
