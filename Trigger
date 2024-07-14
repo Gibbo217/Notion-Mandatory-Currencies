@@ -9,7 +9,7 @@
   <button onclick="triggerWebhook()">Trigger Webhook</button>
   <script>
     function triggerWebhook() {
-      fetch('bdceybfo99y2jr02u2wq3c03td4fc7ba@hook.eu1.make.com', {
+      fetch('https://hook.eu1.make.com/z8mxklx576skpknljj9pvw3qnm9a72r1', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
